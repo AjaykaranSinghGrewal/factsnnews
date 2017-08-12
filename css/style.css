@@ -1,0 +1,182 @@
+html, body{
+    height: 100%;
+}
+
+.list-font{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    display: inline;
+}
+.list-font li a:hover{
+    background-color: transparent;
+    color: coral;
+}
+
+.list-font li{
+    display: inline;
+}
+
+#stage{
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#stage-caption{
+    font-size: 3.7rem;
+    color: white;
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#stage-caption p{
+    font-size: 2.7rem;
+    color: white;
+    opacity: 0.7;
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#stage-caption h1{
+    text-transform: uppercase;
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background:no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+        }
+
+.stopfade { 
+opacity: .5;
+}
+
+#down-button{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.news img{
+    max-width: 90%;
+    max-height: 100%;
+    margin: 2rem;
+}
+#features {
+    padding: 6rem 0;
+}
+#features .container h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px orange solid;
+}
+
+.feature-dark{
+    background: #262f36;
+    color: white;
+}
+
+.content{
+    padding: 5rem 0 0 0;
+    overflow: hidden;
+}
+
+.feature-caption h6{
+    font-size: 5rem;
+}
+
+.btn-success{
+    font-size: 2rem;
+}
+
+.feature-caption h2{
+    font-size: 3rem;
+}
+
+.feature-caption p{
+    font-size: 2rem;
+}
+
+#main_footer{
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+#icons li{
+    text-decoration: none;
+    display: inline;
+    padding-right: 9px; 
+}
+
+
+#icons{
+    margin: 2rem 0 0 0;
+    padding: 1.5rem 0 0 0;
+    text-align: center;
+    padding-bottom: 0;
+    background-color: white;
+}
+
+#icons .twitter:hover{
+    color: #6cadde;
+}
+
+#icons .facebook:hover{
+    color: #3b5998;
+}
+
+#icons .instagram:hover{
+    color: #fb3958;
+}
+
+#icons .google:hover{
+    color: #ea4335;
+}
+
+#screenshots .container h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px orange solid;
+}
+
+#screenshots{
+    padding: 5rem;
+}
+
+.resp-pad img{
+    border-radius: 5px;
+}
+
+.form-group{
+    margin-left: 25%;
+}
+
+.btn-success{
+    margin-left: 3%;    
+}
+
+.card{
+    opacity: 0;
+}
+
+.resp-pad img{
+    opacity: 0;
+}
