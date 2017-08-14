@@ -28,6 +28,7 @@ if (isset($_POST['email'])){
       
       <!--Custom CSS-->
       <link href="css/style.css" rel="stylesheet">
+      <link href="css/media.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,12 +92,13 @@ if (isset($_POST['email'])){
         </div>
     </div>
 
-<div class="row">
-    <div class="col-lg-12">
-        <a id="down-button" href="#features" class="btn btn-secondary-outline btn-lg" role="button"><i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i></a>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <a id="down-button" href="#features" class="btn btn-secondary-outline btn-lg" role="button"><i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i></a>
+        </div>
     </div>
 </div>
-
       
       
 <section id="features" style="background-color: white;">    
@@ -108,6 +110,7 @@ if (isset($_POST['email'])){
 <div class="row">
 <div class="col-sm-12">
 <div class="card-columns">
+    
   <div class="card">
     <img class="card-img-top img-fluid" src="image/cat.jpg" alt="Card image cap">
     <div class="card-block">
@@ -115,6 +118,7 @@ if (isset($_POST['email'])){
       <p class="card-text">Fact Categories include - Dogs, Technology, Cats, Random Facts, India, Weird Laws, Celebrities, Random Number Facts.</p>
     </div>
   </div>
+    
   <div class="card p-3">
     <blockquote class="card-block card-blockquote">
       <p>Laugh with your friends with unlimited Yo Mama and Chuck Norris jokes.</p>
@@ -125,6 +129,7 @@ if (isset($_POST['email'])){
 
     </blockquote>
   </div>
+    
   <div class="card">
     <img class="card-img-top img-fluid" src="image/dog.jpg" alt="Card image cap">
     <div class="card-block">
@@ -132,6 +137,7 @@ if (isset($_POST['email'])){
       <p class="card-text">Just click the refresh button and  *tada* a new picture of a cut pup.</p>
     </div>
   </div>
+    
   <div class="card card-inverse card-primary p-3 text-center" style="background-color: orange;">
     <blockquote class="card-blockquote">
       <p>“No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire.” </p>
@@ -144,6 +150,7 @@ if (isset($_POST['email'])){
   <div class="card">
     <img class="card-img img-fluid" src="image/news.jpg" alt="Card image">
   </div>
+    
   <div class="card p-3 text-right">
     <blockquote class="card-blockquote">
       <p>Keep Your self updated with the latest/most current news with an option to read the full story by navigating to the website.</p>
@@ -152,18 +159,21 @@ if (isset($_POST['email'])){
         </small>
     </blockquote>
   </div>
-      <div class="card text-center">
+    
+    <div class="card text-center">
     <div class="card-block">
       <h4 class="card-title">Other Features</h4>
       <p class="card-text">Text-to-Speech, Favourite and Unfavourite facts, Sharing via Email, Messages, WhatsApp, Messanger etc., Set Wallpaper of your favourite canine with just a click.</p>
     </div>
   </div>
+    
   <div class="card">
     <div class="card-block">
       <h4 class="card-title">Also</h4>
       <p class="card-text">Free in-store download. Easy to use and navigate. Simple UI for all ages.</p>
     </div>
   </div>
+    
 </div>              
 </div>
       </div>
@@ -216,14 +226,18 @@ if (isset($_POST['email'])){
             <a href="https://play.google.com/store/apps/details?id=grewal.example.ajayk.factofun" class="btn btn-lg btn-success" style="font-size: 2rem;">Download App!</a>
             <br/><br/>
             <p id="para" class="display-4">Subscribe for more updates</p>
-            
-        <form class="form-inline" method="post" name="form1">
+        
+        <div id="formi">
+        <form class="form-inline" action="#formi" method="post" name="form1">
           <div class="form-group form-group-lg">
+              
             <label for="email"></label>
             <input name="email" type="email" class="form-control" id="exampleInputEmail2" placeholder="Your Email" required>
           </div>
           <button id="submit" type="submit" class="btn btn-lg btn-success">Subscibe</button>
+            
         </form>
+        </div>
         <br/>
             
             <p>Also Check Out the <a href="https://play.google.com/store/apps/details?id=grewal.example.ajayk.bottlespin">Other App</a> by Ajaykaran Singh Grewal</p>
@@ -263,6 +277,17 @@ if (isset($_POST['email'])){
     <script src="js/bootstrap.min.js"></script>
       
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+          $('form').submit(function(evnt){
+           evnt.preventDefault();
+            var url = $(this).attr("action");
+            var formData = $(this).serialize();
+            $.post(url, formData, function(resp){
+               $('#formi').html("<p>Thank You for subscribing.</p>"); 
+            });
+        });  
+    </script>
     
     <script src="js/custom.js"></script>
   </body>

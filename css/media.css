@@ -1,0 +1,35 @@
+@media only screen and (max-width: 500px){
+    #stage-caption img{
+        display: none;
+    }
+
+    #down-button{
+        display: none;
+    }
+    
+    .navbar, .news img, {
+        display: none;
+    }
+    
+    #features{
+        margin-right: 0;
+    }
+    
+    .content a, .resp-pad img{
+        margin-bottom: 3%;
+    }
+    
+    .form-inline{
+        font-size: 2px;
+    }
+    
+    .form-group{
+        margin: 0 auto;
+    }
+    
+    .btn-success{
+        margin: 0 auto;
+    }
+    
+
+}
